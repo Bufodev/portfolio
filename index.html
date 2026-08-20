@@ -516,23 +516,28 @@
                 <div class="contact-v2-right glass-card animated-contact-card" style="padding: 40px; background: rgba(10, 10, 15, 0.9); border: 1px solid rgba(192, 132, 252, 0.3); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     <h3 style="font-size: 28px; margin-bottom: 5px; font-family: 'Syne', sans-serif;">Let's Connect</h3>
                     <p style="color: var(--text-dim); margin-bottom: 30px; font-size: 15px;">Thank you for reaching out. I'll get back to you soon.</p>
-                    <form class="cv2-form" id="contact-form">
+                    <form class="cv2-form" id="contact-form" novalidate>
                         <div class="cv2-form-group">
-                            <label style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Name</label>
-                            <input type="text" placeholder="Your Name" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; border-radius: 8px;">
+                            <label for="contact-name" style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Name</label>
+                            <input id="contact-name" name="name" type="text" placeholder="Your Name" autocomplete="name" maxlength="100" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; border-radius: 8px;">
                         </div>
                         <div class="cv2-form-group" style="margin-top: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Telegram username</label>
-                            <input type="text" placeholder="@yourname" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; border-radius: 8px;">
+                            <label for="contact-telegram" style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Telegram username</label>
+                            <input id="contact-telegram" name="telegram" type="text" placeholder="@yourname" autocomplete="off" maxlength="100" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; border-radius: 8px;">
                         </div>
                         <div class="cv2-form-group" style="margin-top: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Message</label>
-                            <textarea placeholder="What's on your mind?" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: 120px; border-radius: 8px; resize: none;"></textarea>
+                            <label for="contact-message" style="display: block; margin-bottom: 8px; font-size: 14px; color: white; font-weight: 600;">Message</label>
+                            <textarea id="contact-message" name="message" placeholder="What's on your mind?" maxlength="3000" required style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: 120px; border-radius: 8px; resize: none;"></textarea>
+                        </div>
+                        <div class="contact-honeypot" aria-hidden="true">
+                            <label for="contact-company">Company</label>
+                            <input id="contact-company" name="company" type="text" tabindex="-1" autocomplete="off">
                         </div>
                         <button type="submit" class="cv2-submit-btn" style="margin-top: 30px; width: 100%; padding: 16px; background: var(--neon-purple); border: none; border-radius: 8px; color: white; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; display: flex; justify-content: center; align-items: center; gap: 10px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            Send Message
+                            <span class="contact-submit-label">Send Message</span>
                         </button>
+                        <p class="contact-form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>

@@ -207,21 +207,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const submitLabel = contactForm.querySelector('.contact-submit-label');
+    const formStatus = contactForm.querySelector('.contact-form-status');
+    const defaultButtonLabel = submitLabel?.textContent || 'Send Message';
+
+    const setFormStatus = (message, type = '') => {
+        if (!formStatus) return;
+        formStatus.textContent = message;
+        formStatus.dataset.status = type;
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Get form data
         const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
+        const data = Object.fromEntries(formData.entries());
 
-        // Simulate form submission
-        console.log('Form submitted:', data);
+        if (!data.name?.trim() || !data.telegram?.trim() || !data.message?.trim()) {
+            setFormStatus('Please complete all fields before sending.', 'error');
+            return;
+        }
 
-        // Show success message (you can customize this)
-        alert('Thank you for your message! I will get back to you soon.');
+        submitButton.disabled = true;
+        if (submitLabel) submitLabel.textContent = 'Sending…';
+        setFormStatus('');
 
-        // Reset form
-        contactForm.reset();
+        try {
+            const response = await fetch('/.netlify/functions/send-contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.ok) {
+                throw new Error(result.error || 'Unable to send your message.');
+            }
+
+            contactForm.reset();
+            setFormStatus('Thank you — your message has been sent.', 'success');
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+            setFormStatus('Unable to send your message right now. Please try again later.', 'error');
+        } finally {
+            submitButton.disabled = false;
+            if (submitLabel) submitLabel.textContent = defaultButtonLabel;
+        }
     });
 }
 
