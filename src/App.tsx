@@ -224,8 +224,9 @@ export function App() {
   };
   const submitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
     const data = Object.fromEntries(
-      new FormData(event.currentTarget).entries(),
+      new FormData(form).entries(),
     );
     if (
       !String(data.name || "").trim() ||
@@ -244,7 +245,7 @@ export function App() {
         body: JSON.stringify(data),
       });
       if (!response.ok) throw new Error("Failed request");
-      event.currentTarget.reset();
+      form.reset();
       setFormStatus({ text: page.messages[2], type: "success" });
     } catch {
       setFormStatus({ text: page.messages[3], type: "error" });
