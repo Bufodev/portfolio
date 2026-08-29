@@ -24,7 +24,7 @@ export function AboutSection({ content }: { content: SiteContent }) {
                 <p>{content.about}</p>
               </div>
               <div className="info-contact">
-                <MiniContact icon={<EmailIcon />} text="ivandevweb@gmail.com" />
+                <MiniContact icon={<EmailIcon />} text="vandevweb@gmail.com" />
                 <MiniContact icon={<LocationIcon />} text={content.country} />
               </div>
             </div>
