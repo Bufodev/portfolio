@@ -3,9 +3,23 @@ import type { SiteContent } from "../content";
 import digitalSprintImage from "../../digitalsprint.png";
 import mathCalmImage from "../../mathcalm.png";
 import pixelHuntImage from "../../pixelhunt.png";
+import veloraImage from "../../velora.png";
+import kyivLegalImage from "../../kyiv-legal.png";
+import { InstagramIcon, TelegramIcon } from "./Icons";
 import { SectionTitle } from "./SectionTitle";
 
 const projects = [
+  {
+    title: "Velora",
+    image: veloraImage,
+    url: "https://velora-shopping.netlify.app/",
+    featured: true,
+  },
+  {
+    title: "Kyiv Legal Group",
+    image: kyivLegalImage,
+    url: "https://kyiv-legal.netlify.app/",
+  },
   {
     title: "Digital Sprint",
     image: digitalSprintImage,
@@ -32,7 +46,7 @@ export function ProjectsSection({ content }: { content: SiteContent }) {
         <div className="projects-grid-v2">
           {projects.map((project, index) => (
             <article
-              className="project-card-v2 glass-card reveal"
+              className={`project-card-v2 glass-card reveal${project.featured ? " project-card-featured" : ""}`}
               key={project.title}
               onClick={() => window.open(project.url, "_blank")}
               style={{ cursor: "pointer" }}
@@ -156,12 +170,12 @@ export function ContactSection({
             />
             <p className="contact-v2-sub">{content.contactIntro}</p>
             <div className="contact-info-list">
-              <ContactInfo icon="📧" text="bufodevweb@gmail.com" />
+              <ContactInfo icon="📧" text="vandevweb@gmail.com" />
               <ContactInfo icon="📍" text={content.country} />
             </div>
             <div className="contact-socials">
               <a
-                href="https://github.com/Bufodev"
+                href="https://github.com/ivandevelopweb"
                 target="_blank"
                 rel="noreferrer"
                 className="social-circle"
@@ -172,6 +186,24 @@ export function ContactSection({
                   alt="GitHub"
                   className="github-icon"
                 />
+              </a>
+              <a
+                href="https://www.instagram.com/ivandevelopweb/"
+                target="_blank"
+                rel="noreferrer"
+                className="social-circle"
+                aria-label="Instagram"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href="https://t.me/ivandevweb"
+                target="_blank"
+                rel="noreferrer"
+                className="social-circle"
+                aria-label="Telegram"
+              >
+                <TelegramIcon />
               </a>
             </div>
           </div>

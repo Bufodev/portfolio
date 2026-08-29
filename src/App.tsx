@@ -3,10 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { AboutSection } from "./components/AboutSection";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { SkillsSection } from "./components/SkillsSection";
 import {
   ContactSection,
-  JourneySection,
   ProjectsSection,
   ServicesSection,
 } from "./components/WorkSections";
@@ -16,9 +14,7 @@ import premiumVibesUrl from "../premium-vibes.js?url";
 const sectionIds = [
   "home",
   "about",
-  "skills",
   "projects",
-  "experience",
   "services",
   "contact",
 ];
@@ -123,7 +119,7 @@ export function App() {
   useCustomCursor();
 
   const navigate = (nextLocale: Locale, replace = false) => {
-    localStorage.setItem("bufo-language", nextLocale);
+    localStorage.setItem("ivan-language", nextLocale);
     window.history[replace ? "replaceState" : "pushState"](
       {},
       "",
@@ -135,7 +131,7 @@ export function App() {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem("bufo-language") as Locale | null;
+    const saved = localStorage.getItem("ivan-language") as Locale | null;
     const browser = (navigator.languages?.[0] || navigator.language || "en")
       .slice(0, 2)
       .toLowerCase();
@@ -274,9 +270,7 @@ export function App() {
       />
       <Hero content={page} typedRole={typedRole} />
       <AboutSection content={page} />
-      <SkillsSection content={page} />
       <ProjectsSection content={page} />
-      <JourneySection content={page} />
       <ServicesSection content={page} />
       <ContactSection
         content={page}

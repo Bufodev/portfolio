@@ -12,19 +12,19 @@ export function AboutSection({ content }: { content: SiteContent }) {
         <div className="about-layout-new">
           <div className="about-left">
             <div className="about-photo-wrapper">
-              <img src={profileImage} alt="Bufo" className="about-photo" />
+              <img src={profileImage} alt="Ivan" className="about-photo" />
             </div>
           </div>
           <div className="about-right">
             <div className="about-info-v2">
               <div className="info-header">
-                <h3 className="about-name">BUFO</h3>
+                <h3 className="about-name">Ivan</h3>
               </div>
               <div className="info-body">
                 <p>{content.about}</p>
               </div>
               <div className="info-contact">
-                <MiniContact icon={<EmailIcon />} text="bufodevweb@gmail.com" />
+                <MiniContact icon={<EmailIcon />} text="ivandevweb@gmail.com" />
                 <MiniContact icon={<LocationIcon />} text={content.country} />
               </div>
             </div>

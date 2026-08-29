@@ -16,7 +16,7 @@ export function Hero({
         </div>
         <div className="hero-text">
           <p className="hero-greeting">{content.greeting}</p>
-          <h1 className="hero-name">Bufo</h1>
+          <h1 className="hero-name">Ivan</h1>
           <h2 className="hero-title">
             {content.build}
             <span className="typed-role">{typedRole}</span>

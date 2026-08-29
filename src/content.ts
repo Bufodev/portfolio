@@ -44,10 +44,10 @@ export type SiteContent = {
 };
 
 const english: SiteContent = {
-  documentTitle: "Bufo - Digital Solutions Architect",
+  documentTitle: "Ivan - Digital Solutions Architect",
   description:
-    "Portfolio of BUFO — Full-stack developer crafting high-performance digital solutions and premium web experiences.",
-  nav: ["HOME", "ABOUT", "SKILLS", "WORK", "JOURNEY", "OFFER", "GET IN TOUCH"],
+    "Portfolio of Ivan — Full-stack developer crafting high-performance digital solutions and premium web experiences.",
+  nav: ["HOME", "ABOUT", "WORK", "OFFER", "GET IN TOUCH"],
   badge: "Fullstack developer",
   greeting: "Hello, World! I'm",
   build: "I build ",
@@ -63,7 +63,7 @@ const english: SiteContent = {
   ],
   aboutSubtitle: "A glimpse into who I am and what I do.",
   about:
-    "I’m Bufo — a web developer focused on turning messy ideas into polished, high-performance digital products. My specialty is building clean, conversion-driven interfaces and landing pages that actually bring in leads, not just pretty pictures.",
+    "I’m Ivan — a web developer focused on turning messy ideas into polished, high-performance digital products. My specialty is building clean, conversion-driven interfaces and landing pages that actually bring in leads, not just pretty pictures.",
   country: "Ukraine",
   skillHeaders: ["CORE SKILLS", "FRONTEND", "BACKEND", "TOOLS & PLATFORMS"],
   skillNames: [
@@ -79,6 +79,10 @@ const english: SiteContent = {
     "REST API Development",
   ],
   projectTags: [
+    "E-commerce",
+    "Brand Experience",
+    "Legal Services",
+    "Business Support",
     "Landing Page",
     "Education",
     "Lead Gen",
@@ -87,6 +91,8 @@ const english: SiteContent = {
     "Gaming",
   ],
   projectDescriptions: [
+    "An e-commerce storefront for curated home, care, and gifting products, built around a calm, premium shopping experience.",
+    "A legal-services website for business and private clients in Kyiv, covering consultations, contracts, litigation, and ongoing support.",
     "A sleek, high-conversion landing page for a 6-month full-stack development course, featuring a clean design and interactive roadmap visualization.",
     "A dark-themed, trust-driven landing page for mathematics tutoring. Designed to highlight teacher credibility and convert visitors into students seamlessly.",
     "A vibrant, immersive landing page for a 72-hour game jam. Built with dynamic gradients, striking typography, and clear event CTAs to maximize participation.",
@@ -159,7 +165,7 @@ const english: SiteContent = {
   formLabels: ["Name", "Telegram username", "Message", "Company"],
   formPlaceholders: ["Your Name", "@yourname", "What’s on your mind?"],
   send: "Send Message",
-  footer: "© 2026 BUFO. All Rights Reserved.",
+  footer: "© 2026 Ivan. All Rights Reserved.",
   roles: [
     "Strategic Branding",
     "Premium Landing Pages",
@@ -183,15 +189,13 @@ const english: SiteContent = {
 };
 
 const ukrainian: SiteContent = {
-  documentTitle: "Bufo — Архітектор цифрових рішень",
+  documentTitle: "Іван — Архітектор цифрових рішень",
   description:
-    "Портфоліо BUFO — фулстек-розробника, який створює швидкі цифрові рішення та вебдосвід преміум-рівня.",
+    "Портфоліо Івана — фулстек-розробника, який створює швидкі цифрові рішення та вебдосвід преміум-рівня.",
   nav: [
     "ГОЛОВНА",
     "ПРО МЕНЕ",
-    "НАВИЧКИ",
     "РОБОТИ",
-    "ШЛЯХ",
     "ПОСЛУГИ",
     "НАПИСАТИ",
   ],
@@ -210,7 +214,7 @@ const ukrainian: SiteContent = {
   ],
   aboutSubtitle: "Коротко про мене та мою роботу.",
   about:
-    "Я Bufo — веброзробник, який перетворює нечіткі ідеї на вивірені, продуктивні цифрові продукти. Моя спеціалізація — чисті інтерфейси та лендінги, орієнтовані на конверсію й реальні заявки, а не лише на гарну картинку.",
+    "Я Іван — веброзробник, який перетворює нечіткі ідеї на вивірені, продуктивні цифрові продукти. Моя спеціалізація — чисті інтерфейси та лендінги, орієнтовані на конверсію й реальні заявки, а не лише на гарну картинку.",
   country: "Україна",
   skillHeaders: [
     "ОСНОВНІ НАВИЧКИ",
@@ -231,6 +235,10 @@ const ukrainian: SiteContent = {
     "Розробка REST API",
   ],
   projectTags: [
+    "Інтернет-магазин",
+    "Брендовий досвід",
+    "Юридичні послуги",
+    "Підтримка бізнесу",
     "Лендінг",
     "Освіта",
     "Збір заявок",
@@ -239,6 +247,8 @@ const ukrainian: SiteContent = {
     "Геймінг",
   ],
   projectDescriptions: [
+    "Інтернет-магазин добірних товарів для дому, догляду та подарунків, побудований навколо спокійного преміального досвіду покупок.",
+    "Сайт юридичних послуг для бізнесу та приватних клієнтів у Києві: консультації, договори, судове представництво й комплексний супровід.",
     "Стильний конверсійний лендінг для шестимісячного курсу з фулстек-розробки — з чистим дизайном та інтерактивною візуалізацією дорожньої карти.",
     "Темний лендінг для викладача математики, побудований на довірі. Він підкреслює експертність викладача та м’яко веде відвідувачів до запису на заняття.",
     "Яскравий атмосферний лендінг для 72-годинного геймджему. Динамічні градієнти, виразна типографіка та чіткі заклики до дії допомагають залучити учасників.",
@@ -311,7 +321,7 @@ const ukrainian: SiteContent = {
   formLabels: ["Ім’я", "Нік у Telegram", "Повідомлення", "Компанія"],
   formPlaceholders: ["Ваше ім’я", "@yourname", "Що у вас на думці?"],
   send: "Надіслати повідомлення",
-  footer: "© 2026 BUFO. Усі права захищені.",
+  footer: "© 2026 Іван. Усі права захищені.",
   roles: [
     "Стратегічний брендинг",
     "Преміальні лендінги",
@@ -336,10 +346,10 @@ const ukrainian: SiteContent = {
 
 const russian: SiteContent = {
   ...ukrainian,
-  documentTitle: "Bufo — архитектор цифровых решений",
+  documentTitle: "Иван — архитектор цифровых решений",
   description:
-    "Портфолио BUFO — фулстек-разработчика, создающего быстрые цифровые решения и веб-опыт премиального уровня.",
-  nav: ["ГЛАВНАЯ", "ОБО МНЕ", "НАВЫКИ", "РАБОТЫ", "ПУТЬ", "УСЛУГИ", "НАПИСАТЬ"],
+    "Портфолио Ивана — фулстек-разработчика, создающего быстрые цифровые решения и веб-опыт премиального уровня.",
+  nav: ["ГЛАВНАЯ", "ОБО МНЕ", "РАБОТЫ", "УСЛУГИ", "НАПИСАТЬ"],
   badge: "Фулстек-разработчик",
   greeting: "Привет, мир! Я",
   build: "Создаю ",
@@ -355,7 +365,7 @@ const russian: SiteContent = {
   ],
   aboutSubtitle: "Немного обо мне и о том, чем я занимаюсь.",
   about:
-    "Я Bufo — веб-разработчик, который превращает неясные идеи в продуманные, производительные цифровые продукты. Моя специализация — чистые интерфейсы и лендинги, ориентированные на конверсию и реальные заявки, а не только на красивую картинку.",
+    "Я Иван — веб-разработчик, который превращает неясные идеи в продуманные, производительные цифровые продукты. Моя специализация — чистые интерфейсы и лендинги, ориентированные на конверсию и реальные заявки, а не только на красивую картинку.",
   country: "Украина",
   skillHeaders: [
     "КЛЮЧЕВЫЕ НАВЫКИ",
@@ -376,6 +386,10 @@ const russian: SiteContent = {
     "Разработка REST API",
   ],
   projectTags: [
+    "Интернет-магазин",
+    "Брендовый опыт",
+    "Юридические услуги",
+    "Поддержка бизнеса",
     "Лендинг",
     "Образование",
     "Сбор заявок",
@@ -384,6 +398,8 @@ const russian: SiteContent = {
     "Гейминг",
   ],
   projectDescriptions: [
+    "Интернет-магазин отобранных товаров для дома, ухода и подарков, построенный вокруг спокойного премиального опыта покупок.",
+    "Сайт юридических услуг для бизнеса и частных клиентов в Киеве: консультации, договоры, представительство в суде и комплексное сопровождение.",
     "Стильный конверсионный лендинг для шестимесячного курса по фулстек-разработке — с чистым дизайном и интерактивной визуализацией дорожной карты.",
     "Тёмный лендинг для преподавателя математики, построенный на доверии. Он подчёркивает экспертность преподавателя и мягко ведёт посетителей к записи на занятия.",
     "Яркий атмосферный лендинг для 72-часового геймджема. Динамичные градиенты, выразительная типографика и понятные призывы к действию помогают привлечь участников.",
@@ -456,7 +472,7 @@ const russian: SiteContent = {
   formLabels: ["Имя", "Ник в Telegram", "Сообщение", "Компания"],
   formPlaceholders: ["Ваше имя", "@yourname", "Что у вас на уме?"],
   send: "Отправить сообщение",
-  footer: "© 2026 BUFO. Все права защищены.",
+  footer: "© 2026 Иван. Все права защищены.",
   roles: [
     "Стратегический брендинг",
     "Премиальные лендинги",

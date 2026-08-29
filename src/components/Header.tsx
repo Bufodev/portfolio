@@ -5,9 +5,7 @@ import { labels, routes } from "../content";
 const navTargets = [
   "home",
   "about",
-  "skills",
   "projects",
-  "experience",
   "services",
   "contact",
 ];
@@ -50,7 +48,7 @@ export function Header({
       <div className="nav-container">
         <div className="logo">
           <a href="#home" className="logo-text" onClick={onAnchorClick}>
-            BU<span className="gradient-text">FO</span>
+            Iv<span className="gradient-text">an</span>
           </a>
         </div>
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`} id="nav-menu">
@@ -60,7 +58,7 @@ export function Header({
               <li key={target}>
                 <a
                   href={`#${target}`}
-                  className={`nav-link ${activeSection === target ? "active" : ""} ${index === 6 ? "nav-contact-btn" : ""}`}
+                  className={`nav-link ${activeSection === target ? "active" : ""} ${index === 4 ? "nav-contact-btn" : ""}`}
                   onClick={onAnchorClick}
                 >
                   {name}

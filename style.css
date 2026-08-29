@@ -1311,6 +1311,11 @@ body:hover .cursor-outer, body:hover .cursor-inner { opacity: 1; }
     box-shadow: 0 8px 20px rgba(192, 132, 252, 0.3);
 }
 
+.contact-socials {
+    display: flex;
+    gap: 15px;
+}
+
 .cv2-form {
     display: flex;
     flex-direction: column;
@@ -1623,6 +1628,29 @@ textarea {
 .projects-grid-v2 {
     gap: clamp(1.25rem, 4vw, 2.5rem);
     margin-top: clamp(2.5rem, 6vw, 3.75rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card-featured {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 43.0625rem) {
+    .project-card-featured {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    }
+
+    .project-card-featured .p-card-top {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid var(--glass-border);
+        border-bottom: 0;
+    }
+
+    .project-card-featured .p-card-bottom {
+        align-self: center;
+    }
 }
 
 .services-grid {
@@ -1776,6 +1804,12 @@ textarea {
     .contact-info-list,
     .contact-socials {
         justify-content: center;
+    }
+}
+
+@media (max-width: 43rem) {
+    .projects-grid-v2 {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
